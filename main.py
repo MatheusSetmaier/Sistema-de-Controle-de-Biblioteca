@@ -14,3 +14,8 @@ def cadastrarLivros():
 
     valores = (titulo, autor, genero, editora, ano_publicado)
     cursor.execute(sql, valores)
+    conexao.commit()
+    cursor.close()
+    conexao.close()
+
+cadastrarLivros()
